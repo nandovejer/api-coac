@@ -177,33 +177,6 @@
     "sources": []
   },
   {
-    "id": "2005-la-dictadura-del-proletariado",
-    "year": 2005,
-    "name": "La Dictadura del Proletariado",
-    "type": "comparsa",
-    "director": "Ángel Subiela",
-    "coac": true,
-    "awards": {
-      "coac_rank": 1,
-      "other": []
-    },
-    "lyrics": {
-      "presentacion": "Antonio Martínez Ares",
-      "pasodoble": "Antonio Martínez Ares",
-      "cuple": "Antonio Martínez Ares",
-      "estribillo": "Antonio Martínez Ares",
-      "popurri": "Antonio Martínez Ares"
-    },
-    "music": {
-      "presentacion": "Antonio Martínez Ares",
-      "pasodoble": "Antonio Martínez Ares",
-      "cuple": "Antonio Martínez Ares",
-      "estribillo": "Antonio Martínez Ares",
-      "popurri": "Antonio Martínez Ares"
-    },
-    "sources": []
-  },
-  {
     "id": "2008-la-gran-final",
     "year": 2008,
     "name": "La gran final",
@@ -212,60 +185,6 @@
     "coac": false,
     "awards": {
       "coac_rank": null,
-      "other": []
-    },
-    "lyrics": {
-      "presentacion": "Antonio Martínez Ares",
-      "pasodoble": "Antonio Martínez Ares",
-      "cuple": "Antonio Martínez Ares",
-      "estribillo": "Antonio Martínez Ares",
-      "popurri": "Antonio Martínez Ares"
-    },
-    "music": {
-      "presentacion": "Antonio Martínez Ares",
-      "pasodoble": "Antonio Martínez Ares",
-      "cuple": "Antonio Martínez Ares",
-      "estribillo": "Antonio Martínez Ares",
-      "popurri": "Antonio Martínez Ares"
-    },
-    "sources": []
-  },
-  {
-    "id": "2010-los-detectives-privados",
-    "year": 2010,
-    "name": "Los Detectives Privados",
-    "type": "chirigota",
-    "director": "Antonio Martínez Ares",
-    "coac": false,
-    "awards": {
-      "coac_rank": null,
-      "other": []
-    },
-    "lyrics": {
-      "presentacion": "Antonio Martínez Ares",
-      "pasodoble": "Antonio Martínez Ares",
-      "cuple": "Antonio Martínez Ares",
-      "estribillo": "Antonio Martínez Ares",
-      "popurri": "Antonio Martínez Ares"
-    },
-    "music": {
-      "presentacion": "Antonio Martínez Ares",
-      "pasodoble": "Antonio Martínez Ares",
-      "cuple": "Antonio Martínez Ares",
-      "estribillo": "Antonio Martínez Ares",
-      "popurri": "Antonio Martínez Ares"
-    },
-    "sources": []
-  },
-  {
-    "id": "2012-el-retorno-del-jedi",
-    "year": 2012,
-    "name": "El Retorno del Jedi",
-    "type": "comparsa",
-    "director": "Ángel Subiela",
-    "coac": true,
-    "awards": {
-      "coac_rank": 2,
       "other": []
     },
     "lyrics": {
@@ -294,35 +213,6 @@
     "awards": {
       "coac_rank": null,
       "other": []
-    },
-    "lyrics": {
-      "presentacion": "Antonio Martínez Ares",
-      "pasodoble": "Antonio Martínez Ares",
-      "cuple": "Antonio Martínez Ares",
-      "estribillo": "Antonio Martínez Ares",
-      "popurri": "Antonio Martínez Ares"
-    },
-    "music": {
-      "presentacion": "Antonio Martínez Ares",
-      "pasodoble": "Antonio Martínez Ares",
-      "cuple": "Antonio Martínez Ares",
-      "estribillo": "Antonio Martínez Ares",
-      "popurri": "Antonio Martínez Ares"
-    },
-    "sources": []
-  },
-  {
-    "id": "2015-la-maquina-del-tiempo",
-    "year": 2015,
-    "name": "La Máquina del Tiempo",
-    "type": "comparsa",
-    "director": "Ángel Subiela",
-    "coac": true,
-    "awards": {
-      "coac_rank": 1,
-      "other": [
-        "Aguja de Oro"
-      ]
     },
     "lyrics": {
       "presentacion": "Antonio Martínez Ares",
@@ -433,33 +323,6 @@
         "url": "https://www.codigocarnaval.com/autores/martinez-ares/"
       }
     ]
-  },
-  {
-    "id": "2018-la-casa-de-papel",
-    "year": 2018,
-    "name": "La Casa de Papel",
-    "type": "chirigota",
-    "director": "Antonio Martínez Ares",
-    "coac": false,
-    "awards": {
-      "coac_rank": null,
-      "other": []
-    },
-    "lyrics": {
-      "presentacion": "Antonio Martínez Ares",
-      "pasodoble": "Antonio Martínez Ares",
-      "cuple": "Antonio Martínez Ares",
-      "estribillo": "Antonio Martínez Ares",
-      "popurri": "Antonio Martínez Ares"
-    },
-    "music": {
-      "presentacion": "Antonio Martínez Ares",
-      "pasodoble": "Antonio Martínez Ares",
-      "cuple": "Antonio Martínez Ares",
-      "estribillo": "Antonio Martínez Ares",
-      "popurri": "Antonio Martínez Ares"
-    },
-    "sources": []
   },
   {
     "id": "2019-los-carnivales",

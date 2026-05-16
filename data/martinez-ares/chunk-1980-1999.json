@@ -504,33 +504,6 @@
     "sources": []
   },
   {
-    "id": "1995-el-quijote",
-    "year": 1995,
-    "name": "El Quijote",
-    "type": "comparsa",
-    "director": "Ángel Subiela",
-    "coac": true,
-    "awards": {
-      "coac_rank": 4,
-      "other": []
-    },
-    "lyrics": {
-      "presentacion": "Antonio Martínez Ares",
-      "pasodoble": "Antonio Martínez Ares",
-      "cuple": "Antonio Martínez Ares",
-      "estribillo": "Antonio Martínez Ares",
-      "popurri": "Antonio Martínez Ares"
-    },
-    "music": {
-      "presentacion": "Antonio Martínez Ares",
-      "pasodoble": "Antonio Martínez Ares",
-      "cuple": "Antonio Martínez Ares",
-      "estribillo": "Antonio Martínez Ares",
-      "popurri": "Antonio Martínez Ares"
-    },
-    "sources": []
-  },
-  {
     "id": "1996-la-trinchera",
     "year": 1996,
     "name": "La Trinchera",
@@ -593,33 +566,6 @@
     "id": "1997-el-vapor",
     "year": 1997,
     "name": "El Vapor",
-    "type": "comparsa",
-    "director": "Ángel Subiela",
-    "coac": true,
-    "awards": {
-      "coac_rank": 2,
-      "other": []
-    },
-    "lyrics": {
-      "presentacion": "Antonio Martínez Ares",
-      "pasodoble": "Antonio Martínez Ares",
-      "cuple": "Antonio Martínez Ares",
-      "estribillo": "Antonio Martínez Ares",
-      "popurri": "Antonio Martínez Ares"
-    },
-    "music": {
-      "presentacion": "Antonio Martínez Ares",
-      "pasodoble": "Antonio Martínez Ares",
-      "cuple": "Antonio Martínez Ares",
-      "estribillo": "Antonio Martínez Ares",
-      "popurri": "Antonio Martínez Ares"
-    },
-    "sources": []
-  },
-  {
-    "id": "1997-la-armada-invencible",
-    "year": 1997,
-    "name": "La Armada Invencible",
     "type": "comparsa",
     "director": "Ángel Subiela",
     "coac": true,
@@ -740,33 +686,6 @@
         "url": "https://www.codigocarnaval.com/autores/martinez-ares/"
       }
     ]
-  },
-  {
-    "id": "1999-la-nueva-milenio",
-    "year": 1999,
-    "name": "La Nueva Milenio",
-    "type": "chirigota",
-    "director": "Antonio Martínez Ares",
-    "coac": false,
-    "awards": {
-      "coac_rank": null,
-      "other": []
-    },
-    "lyrics": {
-      "presentacion": "Antonio Martínez Ares",
-      "pasodoble": "Antonio Martínez Ares",
-      "cuple": "Antonio Martínez Ares",
-      "estribillo": "Antonio Martínez Ares",
-      "popurri": "Antonio Martínez Ares"
-    },
-    "music": {
-      "presentacion": "Antonio Martínez Ares",
-      "pasodoble": "Antonio Martínez Ares",
-      "cuple": "Antonio Martínez Ares",
-      "estribillo": "Antonio Martínez Ares",
-      "popurri": "Antonio Martínez Ares"
-    },
-    "sources": []
   },
   {
     "id": "1999-la-pamplina",
