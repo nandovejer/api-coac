@@ -107,7 +107,7 @@ class CarnivalTimeline extends HTMLElement {
               <h3>${item.name}</h3>
               <span class="tag ${item.type}">${item.type}</span>
             </div>
-            ${rank ? `<div class="award-badge">🏅 ${rank}º Premio COAC</div>` : ''}
+            ${rank != null ? `<div class="award-badge">🏅 ${typeof rank === 'number' ? `${rank}º Premio COAC` : rank}</div>` : ''}
             <div class="meta-info">
               <div>Dirección: <span>${item.director || 'No consta'}</span></div>
             </div>

@@ -7,7 +7,7 @@
     "director": "Ángel Subiela",
     "coac": true,
     "awards": {
-      "coac_rank": null,
+      "coac_rank": "semifinal",
       "other": []
     },
     "lyrics": {
@@ -34,7 +34,7 @@
     "director": "Manuel Rodríguez Cantero",
     "coac": true,
     "awards": {
-      "coac_rank": null,
+      "coac_rank": "semifinal",
       "other": []
     },
     "lyrics": {
@@ -201,7 +201,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
-    "sources": []
+    "sources": [
+      {
+        "name": "Diario de Cadiz",
+        "url": "https://www.diariodecadiz.es/chiclana/Martinez-Ares-Gran-Final-Moderno_0_242676208.html"
+      }
+    ]
   },
   {
     "id": "2013-yo-y-mi-circus-tancia",
