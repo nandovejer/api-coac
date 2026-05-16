@@ -1,0 +1,17 @@
+[
+  {
+    "id": "martinez-ares",
+    "name": "Antonio Martínez Ares",
+    "role": "Letrista y compositor",
+    "bio": "Referente indiscutible del Carnaval de Cádiz. Autor de letras y música de algunas de las comparsas más premiadas de la historia del COAC.",
+    "active_since": 1984,
+    "page": "authors/martinez-ares/",
+    "data_path": "data/martinez-ares/",
+    "chunks": [
+      "chunk-1965-1979.json",
+      "chunk-1980-1999.json",
+      "chunk-2000-2019.json",
+      "chunk-2020-2033.json"
+    ]
+  }
+]

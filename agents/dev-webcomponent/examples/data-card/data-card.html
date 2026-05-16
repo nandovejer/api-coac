@@ -1,0 +1,22 @@
+<template id="data-card-template">
+  <article class="card">
+    <header class="card-header">
+      <h2 class="card-title"></h2>
+      <button class="card-close" aria-label="Close card" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </header>
+
+    <div class="card-body">
+      <slot name="content">
+        <p class="card-description"></p>
+      </slot>
+    </div>
+
+    <footer class="card-footer">
+      <slot name="footer">
+        <button class="card-action" type="button">Action</button>
+      </slot>
+    </footer>
+  </article>
+</template>

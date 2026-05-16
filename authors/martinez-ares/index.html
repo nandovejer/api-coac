@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antonio Martínez Ares — Discografía Carnavalesca · COAC Archivo</title>
+  <meta name="description"
+    content="Archivo completo de obras carnavalescas de Antonio Martínez Ares: letras, música, directores y premios COAC desde 1965.">
+  <link rel="stylesheet" href="../../landing/css/styles.css">
+</head>
+
+<body>
+
+  <!-- ── Nav ──────────────────────────────────────────────────────────── -->
+  <nav class="nav" aria-label="Navegación principal">
+    <a class="nav-brand" href="../../">
+      <span class="nav-brand-icon" aria-hidden="true">🎭</span>
+      <span>COAC · Archivo</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="../../">← Todos los autores</a></li>
+      <li><a href="#timeline">Discografía</a></li>
+      <li class="nav-cta"><a href="../../data/search-index.json" target="_blank" rel="noopener">API JSON</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+  <header class="hero" role="banner">
+    <p class="hero-eyebrow">Carnaval de Cádiz · Archivo histórico</p>
+    <h1>Antonio Martínez Ares</h1>
+    <p class="hero-subtitle">
+      Discografía carnavalesca completa — letras, música, directores y premios COAC
+      documentados hasta la actualidad.
+    </p>
+    <dl class="hero-stats">
+      <div class="hero-stat">
+        <dt>+40</dt>
+        <dd>Años de trayectoria</dd>
+      </div>
+      <div class="hero-stat">
+        <dt>4</dt>
+        <dd>Décadas documentadas</dd>
+      </div>
+      <div class="hero-stat">
+        <dt>MIT</dt>
+        <dd>Datos abiertos</dd>
+      </div>
+    </dl>
+  </header>
+
+  <!-- ── Timeline ──────────────────────────────────────────────────────── -->
+  <main id="timeline">
+    <carnival-timeline data-api="../../data/martinez-ares/"></carnival-timeline>
+  </main>
+
+  <!-- ── Footer ────────────────────────────────────────────────────────── -->
+  <footer class="site-footer" aria-label="Pie de página">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <span class="footer-brand-icon" aria-hidden="true">🎭</span>
+        <strong>Antonio Martínez Ares</strong>
+        <p>
+          Archivo digital de la obra carnavalesca del maestro gaditano.
+          Datos estructurados, abiertos y libres para investigadores,
+          aficionados y plataformas digitales.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Datos</h3>
+        <ul>
+          <li><a href="../../data/martinez-ares/chunk-1965-1979.json" target="_blank" rel="noopener">1965 – 1979</a>
+          </li>
+          <li><a href="../../data/martinez-ares/chunk-1980-1999.json" target="_blank" rel="noopener">1980 – 1999</a>
+          </li>
+          <li><a href="../../data/martinez-ares/chunk-2000-2019.json" target="_blank" rel="noopener">2000 – 2019</a>
+          </li>
+          <li><a href="../../data/martinez-ares/chunk-2020-2033.json" target="_blank" rel="noopener">2020 – 2033</a>
+          </li>
+          <li><a href="../../data/search-index.json" target="_blank" rel="noopener">Índice de búsqueda</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Proyecto</h3>
+        <ul>
+          <li><a href="https://github.com/nandovejer/ares-api" target="_blank" rel="noopener">Repositorio</a></li>
+          <li><a href="https://github.com/nandovejer/ares-api/blob/main/CONTRIBUTING.md" target="_blank"
+              rel="noopener">Contribuir</a></li>
+          <li><a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">Licencia MIT</a></li>
+        </ul>
+        <p style="margin-top:1.25rem">
+          Información de carácter histórico y cultural.<br>
+          Todos los datos son de dominio público.
+        </p>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>Obra de <strong>Fernando Muñoz Muñoz</strong> · © 2026 · Datos bajo licencia MIT · Carnaval de Cádiz</p>
+    </div>
+  </footer>
+
+  <script src="../../landing/js/timeline.js"></script>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      menu.classList.toggle('is-open');
+    });
+  </script>
+
+</body>
+
+</html>

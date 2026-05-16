@@ -1,0 +1,330 @@
+[
+  {
+    "id": "2020-la-chusma-selecta",
+    "year": 2020,
+    "name": "La Chusma Selecta",
+    "type": "comparsa",
+    "director": "Rafael Velázquez",
+    "coac": true,
+    "awards": {
+      "coac_rank": 2,
+      "other": [
+        "Antifaz de Oro",
+        "Coplas para Andalucía"
+      ]
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2022-la-bruja-de-salem",
+    "year": 2022,
+    "name": "La Bruja de Salem",
+    "type": "chirigota",
+    "director": "Antonio Martínez Ares",
+    "coac": false,
+    "awards": {
+      "coac_rank": null,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2022-los-sumisos",
+    "year": 2022,
+    "name": "Los Sumisos",
+    "type": "comparsa",
+    "director": "Antonio Martínez Ares",
+    "coac": true,
+    "awards": {
+      "coac_rank": 1,
+      "other": [
+        "Coplas para Andalucía"
+      ]
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": [
+      {
+        "name": "Código Carnaval",
+        "url": "https://www.codigocarnaval.com/autores/martinez-ares/"
+      }
+    ]
+  },
+  {
+    "id": "2023-la-ciudad-invisible",
+    "year": 2023,
+    "name": "La Ciudad Invisible",
+    "type": "comparsa",
+    "director": "Antonio Martínez Ares",
+    "coac": true,
+    "awards": {
+      "coac_rank": 1,
+      "other": [
+        "Aguja de Oro"
+      ]
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": [
+      {
+        "name": "Código Carnaval",
+        "url": "https://www.codigocarnaval.com/autores/martinez-ares/"
+      }
+    ]
+  },
+  {
+    "id": "2023-la-venganza-del-pasado",
+    "year": 2023,
+    "name": "La Venganza del Pasado",
+    "type": "comparsa",
+    "director": "Ángel Subiela",
+    "coac": true,
+    "awards": {
+      "coac_rank": 2,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2024-la-oveja-negra",
+    "year": 2024,
+    "name": "La Oveja Negra",
+    "type": "comparsa",
+    "director": "Antonio Martínez Ares",
+    "coac": true,
+    "awards": {
+      "coac_rank": 1,
+      "other": [
+        "Coplas para Andalucía"
+      ]
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": [
+      {
+        "name": "Código Carnaval",
+        "url": "https://www.codigocarnaval.com/autores/martinez-ares/"
+      }
+    ]
+  },
+  {
+    "id": "2024-la-rebelion-digital",
+    "year": 2024,
+    "name": "La Rebelión Digital",
+    "type": "chirigota",
+    "director": "Antonio Martínez Ares",
+    "coac": false,
+    "awards": {
+      "coac_rank": null,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2025-la-ultima-frontera",
+    "year": 2025,
+    "name": "La Última Frontera",
+    "type": "comparsa",
+    "director": "Ángel Subiela",
+    "coac": true,
+    "awards": {
+      "coac_rank": 1,
+      "other": [
+        "Aguja de Oro"
+      ]
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2025-los-cuervos",
+    "year": 2025,
+    "name": "Los Cuervos",
+    "type": "antología",
+    "director": "Antonio Martínez Ares",
+    "coac": false,
+    "awards": {
+      "coac_rank": null,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2026-los-humanos",
+    "year": 2026,
+    "name": "Los Humanos",
+    "type": "comparsa",
+    "director": "Antonio Martínez Ares",
+    "coac": true,
+    "awards": {
+      "coac_rank": 2,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": [
+      {
+        "name": "Código Carnaval",
+        "url": "https://www.codigocarnaval.com/coac/2026/los-humanos/"
+      }
+    ]
+  },
+  {
+    "id": "2027-los-pecadores",
+    "year": 2027,
+    "name": "Los Pecadores",
+    "type": "comparsa",
+    "director": "Antonio Martínez Ares",
+    "coac": true,
+    "awards": {
+      "coac_rank": null,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  }
+]

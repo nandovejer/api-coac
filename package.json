@@ -1,0 +1,30 @@
+{
+  "name": "ares-api",
+  "version": "1.0.0",
+  "description": "Zero-dependency static API for Antonio Martínez Ares' complete works",
+  "main": "validate.js",
+  "packageManager": "pnpm@8.0.0",
+  "scripts": {
+    "validate": "node validate.js",
+    "test": "pnpm validate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nandovejer/ares-api"
+  },
+  "keywords": [
+    "api",
+    "static",
+    "json",
+    "carnival",
+    "ares",
+    "carnaval",
+    "cadiz"
+  ],
+  "author": "Antonio Martínez Ares Archive Contributors",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COAC Archivo — API de datos del Carnaval de Cádiz</title>
+  <meta name="description" content="Archivo digital estructurado del COAC. Datos abiertos sobre agrupaciones, autores, letras, música y premios del Carnaval de Cádiz.">
+  <link rel="stylesheet" href="landing/css/styles.css">
+  <style>
+    .authors-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    .authors-section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+    }
+    .authors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .author-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      transition: box-shadow 0.2s, border-color 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .author-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      border-color: var(--accent);
+    }
+    .author-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .author-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.25;
+    }
+    .author-role {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: -0.4rem;
+    }
+    .author-bio {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      flex: 1;
+    }
+    .author-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 0.25rem;
+    }
+    .author-cta::after { content: "→"; }
+
+    /* Card placeholder para futuros autores */
+    .author-card.coming-soon {
+      border-style: dashed;
+      background: transparent;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    .author-card.coming-soon .author-name { color: var(--text-muted); }
+
+    /* API section */
+    .api-section {
+      background: var(--dark);
+      color: rgba(255,255,255,0.8);
+      padding: 4rem 2rem;
+    }
+    .api-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .api-inner h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .api-inner p { font-size: 0.95rem; line-height: 1.65; margin-bottom: 0.75rem; }
+    pre {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      font-size: 0.82rem;
+      overflow-x: auto;
+      margin-top: 1.25rem;
+      color: #e2e8f0;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .authors-section { padding: 2.5rem 1.25rem; }
+      .api-section { padding: 2.5rem 1.25rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Nav ──────────────────────────────────────────────────────────── -->
+  <nav class="nav" aria-label="Navegación principal">
+    <a class="nav-brand" href="#">
+      <span class="nav-brand-icon" aria-hidden="true">🎭</span>
+      <span>COAC · Archivo</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="#autores">Autores</a></li>
+      <li><a href="#api">API</a></li>
+      <li class="nav-cta"><a href="data/search-index.json" target="_blank" rel="noopener">API JSON</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+  <header class="hero" role="banner">
+    <p class="hero-eyebrow">Carnaval de Cádiz · Datos abiertos</p>
+    <h1>COAC Archivo</h1>
+    <p class="hero-subtitle">
+      API estática con datos estructurados sobre agrupaciones, autores, letras,
+      música y premios del Concurso Oficial de Agrupaciones Carnavalescas de Cádiz.
+    </p>
+    <dl class="hero-stats">
+      <div class="hero-stat">
+        <dt>1</dt>
+        <dd>Autor documentado</dd>
+      </div>
+      <div class="hero-stat">
+        <dt>+40</dt>
+        <dd>Años de historia</dd>
+      </div>
+      <div class="hero-stat">
+        <dt>MIT</dt>
+        <dd>Datos abiertos</dd>
+      </div>
+    </dl>
+  </header>
+
+  <!-- ── Autores ───────────────────────────────────────────────────────── -->
+  <section class="authors-section" id="autores" aria-labelledby="autores-title">
+    <p class="authors-section-title" id="autores-title">Autores disponibles</p>
+    <div class="authors-grid">
+
+      <a class="author-card" href="authors/martinez-ares/">
+        <div class="author-avatar" aria-hidden="true">🎶</div>
+        <div>
+          <p class="author-name">Antonio Martínez Ares</p>
+          <p class="author-role">Letrista y compositor · desde 1984</p>
+        </div>
+        <p class="author-bio">
+          Referente indiscutible del Carnaval de Cádiz. Autor de letras y música de
+          algunas de las comparsas más premiadas de la historia del COAC.
+        </p>
+        <span class="author-cta">Ver discografía</span>
+      </a>
+
+      <div class="author-card coming-soon" aria-hidden="true">
+        <div class="author-avatar">🥁</div>
+        <div>
+          <p class="author-name">Próximo autor</p>
+          <p class="author-role">En preparación</p>
+        </div>
+        <p class="author-bio">Nuevos autores y discografías se irán añadiendo progresivamente al archivo.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── API ───────────────────────────────────────────────────────────── -->
+  <section class="api-section" id="api">
+    <div class="api-inner">
+      <h2>Uso de la API</h2>
+      <p>Todos los datos son ficheros JSON estáticos servidos desde GitHub Pages. Sin autenticación, sin rate limiting, con CORS habilitado.</p>
+      <pre><code>// Registro de autores
+GET /data/authors.json
+
+// Datos de un autor por era
+GET /data/martinez-ares/chunk-1980-1999.json
+GET /data/martinez-ares/chunk-2000-2019.json
+
+// Índice de búsqueda global
+GET /data/search-index.json</code></pre>
+      <pre><code>// Ejemplo en JavaScript
+const BASE = 'https://nandovejer.github.io/ares-api/data/';
+
+const authors = await fetch(BASE + 'authors.json').then(r => r.json());
+
+const works = await fetch(BASE + 'martinez-ares/chunk-1980-1999.json')
+  .then(r => r.json());</code></pre>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────────────────── -->
+  <footer class="site-footer" aria-label="Pie de página">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <span class="footer-brand-icon" aria-hidden="true">🎭</span>
+        <strong>COAC · Archivo</strong>
+        <p>
+          Archivo digital del Concurso Oficial de Agrupaciones Carnavalescas de Cádiz.
+          Datos estructurados, abiertos y libres para investigadores,
+          aficionados y plataformas digitales.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Autores</h3>
+        <ul>
+          <li><a href="authors/martinez-ares/">Antonio Martínez Ares</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Proyecto</h3>
+        <ul>
+          <li><a href="https://github.com/nandovejer/ares-api" target="_blank" rel="noopener">Repositorio</a></li>
+          <li><a href="https://github.com/nandovejer/ares-api/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contribuir</a></li>
+          <li><a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">Licencia MIT</a></li>
+        </ul>
+        <p style="margin-top:1.25rem">
+          Información de carácter histórico y cultural.<br>
+          Todos los datos son de dominio público.
+        </p>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>Obra de <strong>Fernando Muñoz Muñoz</strong> · © 2026 · Datos bajo licencia MIT · Carnaval de Cádiz</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu   = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      menu.classList.toggle('is-open');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+# pnpm configuration
+
+# Use strict peer dependencies
+strict-peer-dependencies=false
+
+# Use shamefully hoist for compatibility
+shamefully-hoist=false
+
+# Store location
+virtual-store-dir=.pnpm
+
+# Node linker (can be: hoisted, isolated, pnp)
+node-linker=isolated

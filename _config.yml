@@ -1,0 +1,42 @@
+# ares-api GitHub Pages Configuration
+
+# Site metadata
+title: ares-api
+description: Static JSON API for Antonio Martínez Ares' complete works
+github_username: nandovejer
+
+# Build settings
+theme: null
+plugins: []
+
+# CORS headers (native to GitHub Pages)
+# Access-Control-Allow-Origin: *
+
+# Exclude from build
+exclude:
+  - validate.js
+  - package.json
+  - package-lock.json
+  - node_modules
+  - .github
+  - .gitignore
+  - README.md (keep it, but Jekyll won't process it)
+
+# Include in build
+include:
+  - data
+  - LICENSE
+
+# Output settings
+output: _site
+encoding: utf-8
+
+# Markdown processor
+markdown: kramdown
+
+# URL settings
+baseurl: /ares-api
+url: https://nandovejer.github.io
+
+# Collections
+collections_dir: data

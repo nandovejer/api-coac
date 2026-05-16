@@ -1,0 +1,496 @@
+[
+  {
+    "id": "2000-la-milagrosa",
+    "year": 2000,
+    "name": "La Milagrosa",
+    "type": "comparsa",
+    "director": "Ángel Subiela",
+    "coac": true,
+    "awards": {
+      "coac_rank": null,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2000-las-geishas",
+    "year": 2000,
+    "name": "Las geishas",
+    "type": "chirigota",
+    "director": "Manuel Rodríguez Cantero",
+    "coac": true,
+    "awards": {
+      "coac_rank": null,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Juan Rivero Torrejón",
+      "pasodoble": "Juan Rivero Torrejón",
+      "cuple": "Juan Rivero Torrejón",
+      "estribillo": "Juan Rivero Torrejón",
+      "popurri": "Juan Rivero Torrejón"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": [
+      {
+        "name": "Código Carnaval",
+        "url": "https://www.codigocarnaval.com/autores/martinez-ares/"
+      }
+    ]
+  },
+  {
+    "id": "2001-la-nina-de-mis-ojos",
+    "year": 2001,
+    "name": "La Niña de mis Ojos",
+    "type": "comparsa",
+    "director": "Francisco Javier Trujillo Jiménez",
+    "coac": true,
+    "awards": {
+      "coac_rank": 1,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": [
+      {
+        "name": "Código Carnaval",
+        "url": "https://www.codigocarnaval.com/autores/martinez-ares/"
+      }
+    ]
+  },
+  {
+    "id": "2002-la-revolucion",
+    "year": 2002,
+    "name": "La Revolución",
+    "type": "comparsa",
+    "director": "Francisco Javier Trujillo Jiménez",
+    "coac": true,
+    "awards": {
+      "coac_rank": 2,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2003-calle-de-la-mar",
+    "year": 2003,
+    "name": "Calle de la Mar",
+    "type": "comparsa",
+    "director": "Francisco Javier Trujillo Jiménez",
+    "coac": true,
+    "awards": {
+      "coac_rank": 3,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": [
+      {
+        "name": "Código Carnaval",
+        "url": "https://www.codigocarnaval.com/autores/martinez-ares/"
+      }
+    ]
+  },
+  {
+    "id": "2004-por-martinez-ares",
+    "year": 2004,
+    "name": "Por Martínez Ares",
+    "type": "album solitario",
+    "director": "Antonio Martínez Ares",
+    "coac": false,
+    "awards": {
+      "coac_rank": null,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2005-la-dictadura-del-proletariado",
+    "year": 2005,
+    "name": "La Dictadura del Proletariado",
+    "type": "comparsa",
+    "director": "Ángel Subiela",
+    "coac": true,
+    "awards": {
+      "coac_rank": 1,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2008-la-gran-final",
+    "year": 2008,
+    "name": "La gran final",
+    "type": "obra de teatro",
+    "director": "Abel Mora",
+    "coac": false,
+    "awards": {
+      "coac_rank": null,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2010-los-detectives-privados",
+    "year": 2010,
+    "name": "Los Detectives Privados",
+    "type": "chirigota",
+    "director": "Antonio Martínez Ares",
+    "coac": false,
+    "awards": {
+      "coac_rank": null,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2012-el-retorno-del-jedi",
+    "year": 2012,
+    "name": "El Retorno del Jedi",
+    "type": "comparsa",
+    "director": "Ángel Subiela",
+    "coac": true,
+    "awards": {
+      "coac_rank": 2,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2013-yo-y-mi-circus-tancia",
+    "year": 2013,
+    "name": "Yo y mi CIRCUS-tancia",
+    "type": "album solitario",
+    "director": "Antonio Martínez Ares",
+    "coac": false,
+    "awards": {
+      "coac_rank": null,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2015-la-maquina-del-tiempo",
+    "year": 2015,
+    "name": "La Máquina del Tiempo",
+    "type": "comparsa",
+    "director": "Ángel Subiela",
+    "coac": true,
+    "awards": {
+      "coac_rank": 1,
+      "other": [
+        "Aguja de Oro"
+      ]
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2016-los-cobardes",
+    "year": 2016,
+    "name": "Los Cobardes",
+    "type": "comparsa",
+    "director": "Rafael Velázquez",
+    "coac": true,
+    "awards": {
+      "coac_rank": 1,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": [
+      {
+        "name": "Código Carnaval",
+        "url": "https://www.codigocarnaval.com/autores/martinez-ares/"
+      }
+    ]
+  },
+  {
+    "id": "2017-la-eternidad",
+    "year": 2017,
+    "name": "La Eternidad",
+    "type": "comparsa",
+    "director": "Rafael Velázquez",
+    "coac": true,
+    "awards": {
+      "coac_rank": 2,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2018-el-perro-andalu",
+    "year": 2018,
+    "name": "El Perro Andalú",
+    "type": "comparsa",
+    "director": "Rafael Velázquez",
+    "coac": true,
+    "awards": {
+      "coac_rank": 4,
+      "other": [
+        "Aguja de Oro",
+        "Coplas para Andalucía"
+      ]
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": [
+      {
+        "name": "Código Carnaval",
+        "url": "https://www.codigocarnaval.com/autores/martinez-ares/"
+      }
+    ]
+  },
+  {
+    "id": "2018-la-casa-de-papel",
+    "year": 2018,
+    "name": "La Casa de Papel",
+    "type": "chirigota",
+    "director": "Antonio Martínez Ares",
+    "coac": false,
+    "awards": {
+      "coac_rank": null,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": []
+  },
+  {
+    "id": "2019-los-carnivales",
+    "year": 2019,
+    "name": "Los Carnívales",
+    "type": "comparsa",
+    "director": "Rafael Velázquez",
+    "coac": true,
+    "awards": {
+      "coac_rank": 1,
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "sources": [
+      {
+        "name": "Código Carnaval",
+        "url": "https://www.codigocarnaval.com/autores/martinez-ares/"
+      }
+    ]
+  }
+]
