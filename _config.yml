@@ -1,8 +1,8 @@
-# ares-api GitHub Pages Configuration
+# api-coac GitHub Pages Configuration
 
 # Site metadata
-title: ares-api
-description: Static JSON API for Antonio Martínez Ares' complete works
+title: api-coac
+description: Static JSON API for COAC — Concurso Oficial de Agrupaciones Carnavalescas de Cádiz
 github_username: nandovejer
 
 # Build settings
@@ -35,7 +35,7 @@ encoding: utf-8
 markdown: kramdown
 
 # URL settings
-baseurl: /ares-api
+baseurl: /api-coac
 url: https://nandovejer.github.io
 
 # Collections

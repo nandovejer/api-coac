@@ -1,7 +1,7 @@
 {
-  "name": "ares-api",
+  "name": "api-coac",
   "version": "1.0.0",
-  "description": "Zero-dependency static API for Antonio Martínez Ares' complete works",
+  "description": "Zero-dependency static JSON API for COAC — Concurso Oficial de Agrupaciones Carnavalescas de Cádiz",
   "main": "validate.js",
   "packageManager": "pnpm@8.0.0",
   "scripts": {
@@ -10,18 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nandovejer/ares-api"
+    "url": "https://github.com/nandovejer/api-coac"
   },
   "keywords": [
     "api",
     "static",
     "json",
+    "coac",
     "carnival",
-    "ares",
     "carnaval",
     "cadiz"
   ],
-  "author": "Antonio Martínez Ares Archive Contributors",
+  "author": "Fernando Muñoz Muñoz",
   "license": "MIT",
   "engines": {
     "node": ">=14.0.0",

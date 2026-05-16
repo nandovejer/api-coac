@@ -27,10 +27,11 @@ jobs:
 
       - name: Check for required files
         run: |
+          test -f data/authors.json || exit 1
           test -f data/search-index.json || exit 1
-          test -f data/chunk-1980-1999.json || exit 1
-          test -f data/chunk-2000-2019.json || exit 1
-          test -f data/chunk-2020-2029.json || exit 1
+          test -f data/martinez-ares/chunk-1980-1999.json || exit 1
+          test -f data/martinez-ares/chunk-2000-2019.json || exit 1
+          test -f data/martinez-ares/chunk-2020-2033.json || exit 1
 
   deploy:
     needs: validate
