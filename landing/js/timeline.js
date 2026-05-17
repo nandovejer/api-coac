@@ -62,11 +62,8 @@ class CarnivalTimeline extends HTMLElement {
     return [...new Set(Object.values(section))].join(", ");
   }
 
-  #youtubeUrl(name) {
-    const q = encodeURIComponent(`'carnaval de cadiz'  + ${name}`).replace(
-      /%20/g,
-      "+",
-    );
+  #youtubeUrl(name, type) {
+    const q = encodeURIComponent(`'${type}' ${name}`).replace(/%20/g, "+");
     return `https://www.youtube.com/results?search_query=${q}`;
   }
 
@@ -106,7 +103,7 @@ class CarnivalTimeline extends HTMLElement {
             const sources = (item.sources ?? []).slice(0, 3);
             const letra = this.#uniqueAuthors(item.lyrics ?? {});
             const musica = this.#uniqueAuthors(item.music ?? {});
-            const ytUrl = this.#youtubeUrl(item.name);
+            const ytUrl = this.#youtubeUrl(item.name, item.type);
 
             return `
           <div class="timeline-card">
@@ -127,14 +124,22 @@ class CarnivalTimeline extends HTMLElement {
               </div>`
                 : ""
             }
-            ${sources.length ? `
+            ${
+              sources.length
+                ? `
               <div class="sources-section">
                 <p class="sources-label">Fuentes</p>
-                ${sources.map(s => `
+                ${sources
+                  .map(
+                    (s) => `
                 <a class="source-link" href="${s.url}" target="_blank" rel="noopener" title="${s.name}">
                   ${linkIcon}<span>${s.name}</span>
-                </a>`).join("")}
-              </div>` : ""}
+                </a>`,
+                  )
+                  .join("")}
+              </div>`
+                : ""
+            }
             <div class="card-actions">
               <a class="yt-link" href="${ytUrl}" target="_blank" rel="noopener" aria-label="Buscar ${item.name} en YouTube" title="Buscar en YouTube">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -400,14 +405,18 @@ class CarnivalTimeline extends HTMLElement {
   }
 
   #clipLine() {
-    const container = this.shadowRoot.querySelector('.timeline-container');
-    const badges = this.shadowRoot.querySelectorAll('.timeline-badge');
+    const container = this.shadowRoot.querySelector(".timeline-container");
+    const badges = this.shadowRoot.querySelectorAll(".timeline-badge");
     if (!container || !badges.length) return;
     const containerRect = container.getBoundingClientRect();
     const lastBadge = badges[badges.length - 1];
     const lastBadgeRect = lastBadge.getBoundingClientRect();
-    const lastBadgeCenterY = lastBadgeRect.top + lastBadgeRect.height / 2 - containerRect.top;
-    container.style.setProperty('--line-bottom', `${containerRect.height - lastBadgeCenterY}px`);
+    const lastBadgeCenterY =
+      lastBadgeRect.top + lastBadgeRect.height / 2 - containerRect.top;
+    container.style.setProperty(
+      "--line-bottom",
+      `${containerRect.height - lastBadgeCenterY}px`,
+    );
   }
 }
 
