@@ -22,6 +22,7 @@ Design, architect, and implement production-ready, accessible, and highly optimi
 ## Input Format
 
 When tasked with creating a Web Component, expect specification including:
+
 - **Component Name:** The kebab-case identifier (e.g., `carousel-gallery`)
 - **Functionality:** What the component does and its primary use cases
 - **State Management:** Required data/state and how it changes
@@ -50,6 +51,7 @@ landing/src/
 ### 2. File Implementation
 
 **`[component-name].html`**
+
 - Clean, semantic HTML markup
 - Wrapped in `<template>` tag when appropriate
 - Uses native `<slot>` tags for content distribution
@@ -57,6 +59,7 @@ landing/src/
 - Minimal, structure-only code
 
 **`[component-name].css`**
+
 - Encapsulated styles using `:host` and `:host-context` selectors
 - `::slotted()` pseudo-element for slotted content styling
 - CSS Custom Properties (--variable-names) for theming
@@ -64,6 +67,7 @@ landing/src/
 - No !important declarations unless absolutely necessary
 
 **`[component-name].js`**
+
 - ES Module class extending `HTMLElement`
 - Private properties with `#` prefix for encapsulation
 - Manages Shadow DOM lifecycle
@@ -76,6 +80,7 @@ landing/src/
 ### 3. Usage Example
 
 Provide an `index.html` snippet demonstrating:
+
 - Script import as ES module
 - Component declaration with sample attributes
 - Event listener attachment
@@ -87,21 +92,25 @@ Provide an `index.html` snippet demonstrating:
 ## Mandatory Constraints (What to DO)
 
 ### 1. Shadow DOM Encapsulation
+
 ```javascript
 constructor() {
   super();
   this.attachShadow({ mode: 'open' });
 }
 ```
+
 - Always use `mode: 'open'` for debuggability
 - Ensures complete style isolation
 
 ### 2. Separation of Concerns
+
 - **HTML:** Structure only (`.html` file with `<template>`)
 - **CSS:** All styles (`.css` file with `:host` and `::slotted`)
 - **JS:** Logic and lifecycle (`.js` file with class definition)
 
 ### 3. Native Lifecycle Hooks
+
 ```javascript
 static get observedAttributes() {
   return ['data-attribute', 'state-prop'];
@@ -121,11 +130,13 @@ disconnectedCallback() {
 ```
 
 ### 4. Reactive Attribute Management
+
 - Always declare `observedAttributes` for props that require reactivity
 - Implement attribute change handling in `attributeChangedCallback()`
 - Avoid full re-renders; update specific nodes only
 
 ### 5. Accessibility (WAI-ARIA)
+
 - Apply appropriate ARIA roles: `role="button"`, `role="listbox"`, etc.
 - Use `aria-label`, `aria-describedby`, `aria-expanded` as needed
 - Implement full keyboard navigation (Arrow keys, Tab, Enter, Escape)
@@ -133,18 +144,22 @@ disconnectedCallback() {
 - Semantic HTML where possible
 
 ### 6. Performance Optimization
+
 - Use `requestAnimationFrame()` for visual updates
 - Throttle/debounce expensive operations
 - Batch DOM reads/writes
 - Minimize reflows and repaints
 
 ### 7. Custom Events
+
 ```javascript
-this.dispatchEvent(new CustomEvent('item-selected', {
-  detail: { itemId: this.selectedId },
-  bubbles: true,
-  composed: true
-}));
+this.dispatchEvent(
+  new CustomEvent("item-selected", {
+    detail: { itemId: this.selectedId },
+    bubbles: true,
+    composed: true,
+  }),
+);
 ```
 
 ---
@@ -152,26 +167,31 @@ this.dispatchEvent(new CustomEvent('item-selected', {
 ## Negative Constraints (What to AVOID)
 
 ### No Frameworks or Wrappers
+
 - No Lit, Stencil, Fast, HyperHTML
 - No React, Vue, Svelte, Angular wrappers
 - Pure vanilla JavaScript only
 
 ### No Third-Party Dependencies
-- No npm packages inside component folders
+
+- No third-party packages inside component folders
 - No Lodash, Moment.js, UUID libraries
 - No CSS frameworks (Tailwind, Bootstrap)
 - No icon libraries — use inline SVG or Unicode instead
 
 ### No Global Scope Pollution
+
 - Never use `window.globalVar = ...`
 - Never inject global CSS stylesheets
 - Always clean up event listeners in `disconnectedCallback()`
 
 ### No Build Step Dependencies
+
 - No TypeScript, Babel, Webpack/Vite
 - Output must run in modern browsers as-is
 
 ### Anti-Patterns to Avoid
+
 - No `innerHTML` blind rewrites — only update changed nodes
 - No synchronous blocking operations — use async/await
 - No circular dependencies between components

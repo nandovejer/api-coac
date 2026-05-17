@@ -83,6 +83,7 @@ Add an entry to `data/search-index.json`:
 ```
 
 **Token Tips:**
+
 - Include year, work name, genre, director, any awards
 - Use lowercase
 - Separate terms with spaces
@@ -93,12 +94,6 @@ Add an entry to `data/search-index.json`:
 ```bash
 pnpm install
 pnpm validate
-```
-
-Or without npm:
-
-```bash
-node validate.js
 ```
 
 All JSON files must pass validation before submitting a PR.
@@ -117,35 +112,45 @@ Found a problem? Please open an issue:
 ### Issue Templates
 
 **Bug Report:**
+
 ```markdown
 ## Description
+
 Brief description of the issue
 
 ## Reproduction Steps
+
 1. Step one
 2. Step two
 
 ## Expected Behavior
+
 What should happen
 
 ## Actual Behavior
+
 What actually happens
 
 ## Files Affected
+
 - `data/chunk-*.json`
 - etc.
 ```
 
 **Data Enhancement:**
+
 ```markdown
 ## Enhancement
+
 Add new works from [year range]
 
 ## Works to Add
+
 - Work A (year)
 - Work B (year)
 
 ## Sources
+
 [Links to documentation]
 ```
 
@@ -155,30 +160,36 @@ Add new works from [year range]
 
 1. **Keep commits atomic** — one logical change per commit
 2. **Write clear commit messages**:
+
    ```
    Add 2026 works to chunk-2020-2033.json
 
    - La Nueva Era (comparsa, COAC winner)
    - El Futuro Es Ahora (chirigota)
-   
+
    Updates search-index.json with new entries.
    ```
 
 3. **Run validation** before pushing:
+
    ```bash
-   npm run validate
+   pnpm validate
    ```
 
 4. **Describe your changes** in the PR description:
+
    ```markdown
    ## Changes
+
    - Added 5 new works from 2026
    - Updated search index with 5 new entries
 
    ## Validation
-   All JSON files validated with `npm run validate`
+
+   All JSON files validated with `pnpm validate`
 
    ## Files Changed
+
    - `data/chunk-2020-2033.json`
    - `data/search-index.json`
    ```
@@ -194,12 +205,14 @@ Add new works from [year range]
 ## Code Style & Standards
 
 ### JSON Formatting
+
 - **Indentation:** 2 spaces
 - **Keys:** Double quotes, camelCase (not snake_case)
 - **Trailing commas:** None
 - **Line endings:** LF (Unix)
 
 **Good:**
+
 ```json
 {
   "id": "1998-los-piratas",
@@ -208,14 +221,16 @@ Add new works from [year range]
 ```
 
 **Bad:**
+
 ```json
 {
   "id": "1998_los_piratas",
-  "year": 1998,
+  "year": 1998
 }
 ```
 
 ### Field Requirements
+
 - **id:** Format must be `YYYY-slug` (lowercase, hyphens only)
 - **year:** Must be 1965–2033
 - **coac:** Must be `true` or `false` (boolean, not string)

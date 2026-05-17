@@ -40,26 +40,24 @@ https://nandovejer.github.io/ares-api/data/
 
 ```javascript
 const year = 1998;
-let chunk = '1980-1999';
-if (year >= 1980 && year <= 1999) chunk = '1980-1999';
-else if (year >= 2000 && year <= 2019) chunk = '2000-2019';
-else if (year >= 2020) chunk = '2020-2033';
-else if (year >= 1965) chunk = '1965-1979';
+let chunk = "1980-1999";
+if (year >= 1980 && year <= 1999) chunk = "1980-1999";
+else if (year >= 2000 && year <= 2019) chunk = "2000-2019";
+else if (year >= 2020) chunk = "2020-2033";
+else if (year >= 1965) chunk = "1965-1979";
 
 fetch(`https://nandovejer.github.io/ares-api/data/chunk-${chunk}.json`)
-  .then(r => r.json())
-  .then(works => console.log(works));
+  .then((r) => r.json())
+  .then((works) => console.log(works));
 ```
 
 ### Search for works
 
 ```javascript
-fetch('https://nandovejer.github.io/ares-api/data/search-index.json')
-  .then(r => r.json())
-  .then(index => {
-    const results = index.filter(item => 
-      item.tokens.includes('piratas')
-    );
+fetch("https://nandovejer.github.io/ares-api/data/search-index.json")
+  .then((r) => r.json())
+  .then((index) => {
+    const results = index.filter((item) => item.tokens.includes("piratas"));
     console.log(results);
   });
 ```
@@ -104,25 +102,27 @@ Each work contains:
 ### Load works from year 2015
 
 ```javascript
-fetch('https://nandovejer.github.io/ares-api/data/chunk-2000-2019.json')
-  .then(r => r.json())
-  .then(works => works.filter(w => w.year === 2015))
-  .then(works => console.log(works));
+fetch("https://nandovejer.github.io/ares-api/data/chunk-2000-2019.json")
+  .then((r) => r.json())
+  .then((works) => works.filter((w) => w.year === 2015))
+  .then((works) => console.log(works));
 ```
 
 ### Load works from year 1975
 
 ```javascript
-fetch('https://nandovejer.github.io/ares-api/data/chunk-1965-1979.json')
-  .then(r => r.json())
-  .then(works => works.filter(w => w.year === 1975))
-  .then(works => console.log(works));
+fetch("https://nandovejer.github.io/ares-api/data/chunk-1965-1979.json")
+  .then((r) => r.json())
+  .then((works) => works.filter((w) => w.year === 1975))
+  .then((works) => console.log(works));
 ```
 
 ### Check if a work won COAC
 
 ```javascript
-const work = { /* ... */ };
+const work = {
+  /* ... */
+};
 if (work.coac && work.awards.coac_rank === 1) {
   console.log(`${work.name} won COAC!`);
 }
@@ -131,19 +131,19 @@ if (work.coac && work.awards.coac_rank === 1) {
 ### Get all COAC winners from 2000-2019
 
 ```javascript
-fetch('https://nandovejer.github.io/ares-api/data/chunk-2000-2019.json')
-  .then(r => r.json())
-  .then(works => works.filter(w => w.coac && w.awards.coac_rank === 1))
-  .then(winners => console.log(winners));
+fetch("https://nandovejer.github.io/ares-api/data/chunk-2000-2019.json")
+  .then((r) => r.json())
+  .then((works) => works.filter((w) => w.coac && w.awards.coac_rank === 1))
+  .then((winners) => console.log(winners));
 ```
 
 ### Search by director in 1980-1999
 
 ```javascript
-fetch('https://nandovejer.github.io/ares-api/data/chunk-1980-1999.json')
-  .then(r => r.json())
-  .then(works => works.filter(w => w.director.includes('Subiela')))
-  .then(works => console.log(works));
+fetch("https://nandovejer.github.io/ares-api/data/chunk-1980-1999.json")
+  .then((r) => r.json())
+  .then((works) => works.filter((w) => w.director.includes("Subiela")))
+  .then((works) => console.log(works));
 ```
 
 ---
@@ -169,24 +169,28 @@ curl 'https://nandovejer.github.io/ares-api/data/search-index.json' | \
 ## Troubleshooting
 
 ### Getting CORS errors?
+
 GitHub Pages automatically enables CORS for all static files. If you're getting errors:
+
 - Verify the URL is correct
 - Check browser console for the exact error
 - Ensure you're using HTTPS, not HTTP
 
 ### JSON validation failing?
-Run `npm run validate` to check for syntax errors:
+
+Run `pnpm validate` to check for syntax errors:
 
 ```bash
-npm install
-npm run validate
+pnpm install
+pnpm validate
 ```
 
 ### Want to contribute new works?
+
 1. Open [CONTRIBUTING.md](CONTRIBUTING.md)
 2. Add your work to the appropriate `data/chunk-*.json` file
 3. Update `data/search-index.json`
-4. Run `npm run validate`
+4. Run `pnpm validate`
 5. Submit a PR
 
 ---
