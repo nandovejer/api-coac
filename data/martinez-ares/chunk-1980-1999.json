@@ -234,22 +234,55 @@
     "sources": []
   },
   {
+    "id": "1988-cara-al-sol",
+    "year": 1988,
+    "name": "Cara al sol",
+    "type": "chirigota",
+    "director": "Bonifacio Súarez Ojeda",
+    "coac": true,
+    "awards": {
+      "coac_rank": "semifinal",
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Sherif - Juan Manuel Braza Benítez",
+      "pasodoble": "Sherif - Juan Manuel Braza Benítez",
+      "cuple": "Sherif - Juan Manuel Braza Benítez",
+      "estribillo": "Sherif - Juan Manuel Braza Benítez",
+      "popurri": "Sherif - Juan Manuel Braza Benítez"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "lyrics_source": [],
+    "sources": [
+      {
+        "name": "libretodecarnaval",
+        "url": "https://libretodecarnaval.blogspot.com/2010/04/cara-al-sol.html"
+      }
+    ]
+  },
+  {
     "id": "1989-cai-no-tiene-cura",
     "year": 1989,
     "name": "Cai no tiene cura",
     "type": "chirigota",
-    "director": "José Luis Ruiz Rivera",
+    "director": "José Luis Ruiz Rivera - Larry",
     "coac": true,
     "awards": {
       "coac_rank": 7,
       "other": []
     },
     "lyrics": {
-      "presentacion": "Juan Manuel Braza Benítez",
-      "pasodoble": "Juan Manuel Braza Benítez",
-      "cuple": "Juan Manuel Braza Benítez",
-      "estribillo": "Juan Manuel Braza Benítez",
-      "popurri": "Juan Manuel Braza Benítez"
+      "presentacion": "Sherif - Juan Manuel Braza Benítez",
+      "pasodoble": "Sherif - Juan Manuel Braza Benítez",
+      "cuple": "Sherif - Juan Manuel Braza Benítez",
+      "estribillo": "Sherif - Juan Manuel Braza Benítez",
+      "popurri": "Sherif - Juan Manuel Braza Benítez"
     },
     "music": {
       "presentacion": "Antonio Martínez Ares",
@@ -440,6 +473,39 @@
       }
     ],
     "sources": []
+  },
+  {
+    "id": "1992-los-hermanos-strambolini",
+    "year": 1992,
+    "name": "Los Hermanos Strambolini, Alehop..Que caia mas tonta",
+    "type": "chirigota",
+    "director": "Manuel Cornejo Aragón",
+    "coac": true,
+    "awards": {
+      "coac_rank": "semifinal",
+      "other": []
+    },
+    "lyrics": {
+      "presentacion": "Agrupación",
+      "pasodoble": "Agrupación",
+      "cuple": "Agrupación",
+      "estribillo": "Agrupación",
+      "popurri": "Agrupación"
+    },
+    "music": {
+      "presentacion": "Antonio Martínez Ares",
+      "pasodoble": "Antonio Martínez Ares",
+      "cuple": "Antonio Martínez Ares",
+      "estribillo": "Antonio Martínez Ares",
+      "popurri": "Antonio Martínez Ares"
+    },
+    "lyrics_source": [],
+    "sources": [
+      {
+        "name": "Diario de Cádiz",
+        "url": "https://www.diariodecadiz.es/diario_del_carnaval/hermanos-Strambolini_0_778422175.html"
+      }
+    ]
   },
   {
     "id": "1992-el-pelotazo",
