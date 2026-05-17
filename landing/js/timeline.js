@@ -66,8 +66,7 @@ class CarnivalTimeline extends HTMLElement {
     const q = encodeURIComponent(`'${type}' ${name}`).replace(/%20/g, "+");
     return `https://www.youtube.com/results?search_query=${q}`;
   }
- 
-  
+
   #renderLoading() {
     this.shadowRoot.innerHTML = `
       <style>${this.#getStyles()}</style>
@@ -143,7 +142,9 @@ class CarnivalTimeline extends HTMLElement {
                 : ""
             }
             <div class="card-actions">
-              ${letrasUrl ? `<a class="letras-link" href="${letrasUrl}" target="_blank" rel="noopener" aria-label="Ver letra de ${item.name}" title="${item.lyrics_source[0].name}">
+              ${
+                letrasUrl
+                  ? `<a class="letras-link" href="${letrasUrl}" target="_blank" rel="noopener" aria-label="Ver letra de ${item.name}" title="${item.lyrics_source[0].name}">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                   <polyline points="14 2 14 8 20 8"/>
@@ -151,7 +152,9 @@ class CarnivalTimeline extends HTMLElement {
                   <line x1="16" y1="17" x2="8" y2="17"/>
                 </svg>
                 Letra
-              </a>` : ""}
+              </a>`
+                  : ""
+              }
               <a class="yt-link" href="${ytUrl}" target="_blank" rel="noopener" aria-label="Buscar ${item.name} en YouTube" title="Buscar en YouTube">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.6 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.2 3.5-6.2 3.5z"/>
@@ -372,6 +375,7 @@ class CarnivalTimeline extends HTMLElement {
         display: flex;
         justify-content: flex-end;
         margin-top: 0.85rem;
+        gap: 0.5rem;
       }
       .letras-link {
         display: inline-flex;
