@@ -4,7 +4,7 @@
     "year": 1984,
     "name": "Requiebro",
     "type": "comparsa",
-    "director": null,
+    "director": "Jesús Monzón",
     "coac": true,
     "awards": {
       "coac_rank": 6,
@@ -26,8 +26,16 @@
     },
     "sources": [
       {
-        "name": "Código Carnaval",
-        "url": "https://www.codigocarnaval.com/autores/martinez-ares/"
+        "name": "Diario de Cádiz",
+        "url": "https://www.diariodecadiz.es/diario_del_carnaval/Martinez-Ares-recuerdos-Requiebro-comparsa_0_113388687.html"
+      },
+      {
+        "name": "Youtube - Final COAC 1984",
+        "url": "https://www.youtube.com/playlist?list=PLjsXKL-BCtb3nXgEqjk6fogZqtgV9hdOO"
+      },
+      {
+        "name": "Kiki Fotógrafo - Requiebros en camerinos",
+        "url": "https://kikifotografo.com/project/1984-la-comparsa-requiebros-en-camerinos/"
       }
     ]
   },

@@ -1,4 +1,4 @@
-﻿const CHUNKS = [
+const CHUNKS = [
   "chunk-1965-1979.json",
   "chunk-1980-1999.json",
   "chunk-2000-2019.json",
@@ -96,12 +96,14 @@ class CarnivalTimeline extends HTMLElement {
     const grouped = this.#groupByYear(data);
     const years = Object.keys(grouped).sort((a, b) => a - b);
 
+    const linkIcon = `<svg class="link-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
+
     const groupsHtml = years
       .map((year) => {
         const cardsHtml = grouped[year]
           .map((item) => {
             const rank = item.awards?.coac_rank;
-            const source = item.sources?.[0];
+            const sources = (item.sources ?? []).slice(0, 3);
             const letra = this.#uniqueAuthors(item.lyrics ?? {});
             const musica = this.#uniqueAuthors(item.music ?? {});
             const ytUrl = this.#youtubeUrl(item.name);
@@ -125,9 +127,16 @@ class CarnivalTimeline extends HTMLElement {
               </div>`
                 : ""
             }
+            ${sources.length ? `
+              <div class="sources-section">
+                <p class="sources-label">Fuentes</p>
+                ${sources.map(s => `
+                <a class="source-link" href="${s.url}" target="_blank" rel="noopener" title="${s.name}">
+                  ${linkIcon}<span>${s.name}</span>
+                </a>`).join("")}
+              </div>` : ""}
             <div class="card-actions">
-              ${source ? `<a class="source-link" href="${source.url}" target="_blank" rel="noopener">${source.name}</a>` : ""}
-              <a class="yt-link" href="${ytUrl}" target="_blank" rel="noopener" aria-label="Buscar ${item.name} en YouTube">
+              <a class="yt-link" href="${ytUrl}" target="_blank" rel="noopener" aria-label="Buscar ${item.name} en YouTube" title="Buscar en YouTube">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.6 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.2 3.5-6.2 3.5z"/>
                 </svg>
@@ -211,7 +220,8 @@ class CarnivalTimeline extends HTMLElement {
         padding: 3rem 1rem;
       }
 
-      * { box-sizing: border-box; margin: 0; padding: 0; }
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      a { color: inherit; text-decoration: none; }
 
       .state-msg {
         text-align: center;
@@ -308,24 +318,45 @@ class CarnivalTimeline extends HTMLElement {
         display: flex; flex-direction: column; gap: 0.25rem;
       }
 
-      .card-actions {
+      .sources-section {
+        border-top: 1px dashed var(--border-color);
+        margin-top: 0.75rem;
+        padding-top: 0.6rem;
         display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        margin-top: 0.85rem;
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+      .sources-label {
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-muted);
+        margin-bottom: 0.1rem;
       }
       .source-link {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
         font-size: 0.78rem;
         color: var(--text-muted);
-        text-decoration: none;
-        flex: 1;
-        min-width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .source-link .link-icon { flex-shrink: 0; }
+      .source-link span {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        min-width: 0;
       }
-      .source-link:hover { color: var(--accent-color); text-decoration: underline; }
+      .source-link:hover { color: var(--accent-color); }
+
+      .card-actions {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0.85rem;
+      }
       .yt-link {
         display: inline-flex;
         align-items: center;
@@ -334,13 +365,11 @@ class CarnivalTimeline extends HTMLElement {
         border-radius: 5px;
         background-color: #fee2e2;
         color: #b91c1c;
-        text-decoration: none;
         font-size: 0.75rem;
         font-weight: 700;
         letter-spacing: 0.01em;
         white-space: nowrap;
         transition: background-color 0.15s, color 0.15s;
-        margin-left: auto;
       }
       .yt-link:hover { background-color: #ef4444; color: #fff; }
       .yt-link:focus-visible { outline: 2px solid #ef4444; outline-offset: 2px; }
