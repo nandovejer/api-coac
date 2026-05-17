@@ -151,7 +151,7 @@ class CarnivalTimeline extends HTMLElement {
                   <line x1="16" y1="13" x2="8" y2="13"/>
                   <line x1="16" y1="17" x2="8" y2="17"/>
                 </svg>
-                Letra
+                
               </a>`
                   : ""
               }
@@ -159,7 +159,7 @@ class CarnivalTimeline extends HTMLElement {
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.6 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.2 3.5-6.2 3.5z"/>
                 </svg>
-                YouTube
+                
               </a>
             </div>
           </div>
@@ -368,7 +368,7 @@ class CarnivalTimeline extends HTMLElement {
         text-overflow: ellipsis;
         white-space: nowrap;
         min-width: 0;
-      }
+        max-width: 240px;     }
       .source-link:hover { color: var(--accent-color); }
 
       .card-actions {
@@ -390,6 +390,9 @@ class CarnivalTimeline extends HTMLElement {
         letter-spacing: 0.01em;
         white-space: nowrap;
         transition: background-color 0.15s, color 0.15s;
+        width: 3em;
+        height: 3em;
+        justify-content: center;
       }
       .letras-link:hover { background-color: #16a34a; color: #fff; }
       .letras-link:focus-visible { outline: 2px solid #16a34a; outline-offset: 2px; }
@@ -407,6 +410,9 @@ class CarnivalTimeline extends HTMLElement {
         letter-spacing: 0.01em;
         white-space: nowrap;
         transition: background-color 0.15s, color 0.15s;
+        width: 3em;
+        height: 3em;
+        justify-content: center;
       }
       .yt-link:hover { background-color: #ef4444; color: #fff; }
       .yt-link:focus-visible { outline: 2px solid #ef4444; outline-offset: 2px; }
