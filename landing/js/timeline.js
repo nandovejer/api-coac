@@ -7,6 +7,7 @@ const CHUNKS = [
 
 class CarnivalTimeline extends HTMLElement {
   #data = [];
+  #finalCoacMap = new Map();
 
   constructor() {
     super();
@@ -36,6 +37,18 @@ class CarnivalTimeline extends HTMLElement {
   async #fetchAndRender(baseUrl) {
     this.#renderLoading();
     try {
+      const basePath = baseUrl.replace(/\/[^/]+\/$/, "/extra/");
+      const finalsData = await fetch(basePath + "final-coac-year.json").then(
+        (r) => {
+          if (!r.ok) throw new Error(`final-coac-year.json: ${r.status}`);
+          return r.json();
+        },
+      );
+      this.#finalCoacMap.clear();
+      for (const item of finalsData) {
+        this.#finalCoacMap.set(item.year, item.url);
+      }
+
       const results = await Promise.all(
         CHUNKS.map((chunk) =>
           fetch(`${baseUrl}${chunk}`).then((r) => {
@@ -94,6 +107,8 @@ class CarnivalTimeline extends HTMLElement {
     const years = Object.keys(grouped).sort((a, b) => a - b);
 
     const linkIcon = `<svg class="link-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
+
+    const finalIcon = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>`;
 
     const groupsHtml = years
       .map((year) => {
@@ -167,10 +182,16 @@ class CarnivalTimeline extends HTMLElement {
           })
           .join("");
 
+        const finalUrl = this.#finalCoacMap.get(Number(year));
+        const finalLink = finalUrl
+          ? `  <a class="final-link" href="${finalUrl}" target="_blank" rel="noopener" title="Ver la final ${year}">${finalIcon}<span>Ver la final</span></a>`
+          : "";
         return `
         <section class="timeline-group">
           <div class="timeline-badge"></div>
-          <div class="timeline-year">${year}</div>
+          <div class="timeline-year">
+          <span>${year}</span> ${finalLink}
+          </div>
           <div class="cards-wrapper">${cardsHtml}</div>
         </section>
       `;
@@ -418,9 +439,41 @@ class CarnivalTimeline extends HTMLElement {
       .yt-link:focus-visible { outline: 2px solid #ef4444; outline-offset: 2px; }
 
       .timeline-group:nth-child(odd) .cards-wrapper  { grid-column: 1; }
-      .timeline-group:nth-child(odd) .timeline-year  { grid-column: 2; justify-content: flex-start; padding-left: 2rem; }
+      .timeline-group:nth-child(odd) .timeline-year  { grid-column: 2; justify-content: flex-start; padding-left: 2rem;
+      align-items: center; gap: 0.25em;
+      
+      }
       .timeline-group:nth-child(even) .cards-wrapper { grid-column: 2; }
-      .timeline-group:nth-child(even) .timeline-year { grid-column: 1; grid-row: 1; justify-content: flex-end; padding-right: 2rem; }
+      .timeline-group:nth-child(even) .timeline-year { grid-column: 1; grid-row: 1; justify-content: flex-end; padding-right: 2rem; 
+      
+        align-items: center; gap: 0.25em;}
+
+      .final-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+        padding: 0.25em 0.5em;
+        height: fit-content;
+        border-radius: 4px;
+        white-space: nowrap;
+        transition: background-color 0.15s, color 0.15s;
+        background-color: rgba(37, 99, 235, 0.1);
+        color: #1d47dc;
+
+      }
+      .final-link:hover {
+        background-color: red;
+        color: white;
+      }
+      .final-link:focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 2px;
+      }
+      .final-link svg {
+        flex-shrink: 0;
+      }
 
       @media (max-width: 768px) {
         .timeline-container::before { left: 20px; top: 16px; }
@@ -437,6 +490,8 @@ class CarnivalTimeline extends HTMLElement {
           grid-column: 1; grid-row: 1;
           justify-content: flex-start; padding: 0;
           font-size: 1.5rem; margin-bottom: 0.5rem;
+          align-items: center;
+          gap: 0.25em;
         }
       }
     `;
