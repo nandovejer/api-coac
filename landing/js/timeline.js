@@ -1,8 +1,8 @@
-const CHUNKS = [
-  'chunk-1965-1979.json',
-  'chunk-1980-1999.json',
-  'chunk-2000-2019.json',
-  'chunk-2020-2033.json',
+﻿const CHUNKS = [
+  "chunk-1965-1979.json",
+  "chunk-1980-1999.json",
+  "chunk-2000-2019.json",
+  "chunk-2020-2033.json",
 ];
 
 class CarnivalTimeline extends HTMLElement {
@@ -10,15 +10,15 @@ class CarnivalTimeline extends HTMLElement {
 
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: "open" });
   }
 
   static get observedAttributes() {
-    return ['data-api'];
+    return ["data-api"];
   }
 
   connectedCallback() {
-    const api = this.getAttribute('data-api');
+    const api = this.getAttribute("data-api");
     if (api) {
       this.#fetchAndRender(api);
     } else {
@@ -28,7 +28,7 @@ class CarnivalTimeline extends HTMLElement {
 
   attributeChangedCallback(name, oldValue, newValue) {
     if (oldValue === newValue) return;
-    if (name === 'data-api' && newValue) {
+    if (name === "data-api" && newValue) {
       this.#fetchAndRender(newValue);
     }
   }
@@ -37,12 +37,12 @@ class CarnivalTimeline extends HTMLElement {
     this.#renderLoading();
     try {
       const results = await Promise.all(
-        CHUNKS.map(chunk =>
-          fetch(`${baseUrl}${chunk}`).then(r => {
+        CHUNKS.map((chunk) =>
+          fetch(`${baseUrl}${chunk}`).then((r) => {
             if (!r.ok) throw new Error(`${chunk}: ${r.status}`);
             return r.json();
-          })
-        )
+          }),
+        ),
       );
       this.#data = results.flat().sort((a, b) => a.year - b.year);
       this.#render(this.#data);
@@ -59,11 +59,14 @@ class CarnivalTimeline extends HTMLElement {
   }
 
   #uniqueAuthors(section) {
-    return [...new Set(Object.values(section))].join(', ');
+    return [...new Set(Object.values(section))].join(", ");
   }
 
   #youtubeUrl(name) {
-    const q = encodeURIComponent(`'carnaval de cadiz'  + ${name}`).replace(/%20/g, '+');
+    const q = encodeURIComponent(`'carnaval de cadiz'  + ${name}`).replace(
+      /%20/g,
+      "+",
+    );
     return `https://www.youtube.com/results?search_query=${q}`;
   }
 
@@ -93,31 +96,37 @@ class CarnivalTimeline extends HTMLElement {
     const grouped = this.#groupByYear(data);
     const years = Object.keys(grouped).sort((a, b) => a - b);
 
-    const groupsHtml = years.map(year => {
-      const cardsHtml = grouped[year].map(item => {
-        const rank = item.awards?.coac_rank;
-        const source = item.sources?.[0];
-        const letra = this.#uniqueAuthors(item.lyrics ?? {});
-        const musica = this.#uniqueAuthors(item.music ?? {});
-        const ytUrl = this.#youtubeUrl(item.name);
+    const groupsHtml = years
+      .map((year) => {
+        const cardsHtml = grouped[year]
+          .map((item) => {
+            const rank = item.awards?.coac_rank;
+            const source = item.sources?.[0];
+            const letra = this.#uniqueAuthors(item.lyrics ?? {});
+            const musica = this.#uniqueAuthors(item.music ?? {});
+            const ytUrl = this.#youtubeUrl(item.name);
 
-        return `
+            return `
           <div class="timeline-card">
             <div class="card-header">
               <h3>${item.name}</h3>
               <span class="tag ${item.type}">${item.type}</span>
             </div>
-            ${rank != null ? `<div class="award-badge">🏅 ${typeof rank === 'number' ? `${rank}º Premio COAC` : rank}</div>` : ''}
+            ${rank != null ? `<div class="award-badge">🏅 ${typeof rank === "number" ? `${rank}º Premio COAC` : rank}</div>` : ""}
             <div class="meta-info">
-              <div>Dirección: <span>${item.director || 'No consta'}</span></div>
+              <div>Dirección: <span>${item.director || "No consta"}</span></div>
             </div>
-            ${letra || musica ? `
+            ${
+              letra || musica
+                ? `
               <div class="authors-details">
-                ${letra  ? `<div><strong>Letra:</strong> ${letra}</div>`  : ''}
-                ${musica ? `<div><strong>Música:</strong> ${musica}</div>` : ''}
-              </div>` : ''}
+                ${letra ? `<div><strong>Letra:</strong> ${letra}</div>` : ""}
+                ${musica ? `<div><strong>Música:</strong> ${musica}</div>` : ""}
+              </div>`
+                : ""
+            }
             <div class="card-actions">
-              ${source ? `<a class="source-link" href="${source.url}" target="_blank" rel="noopener">${source.name}</a>` : ''}
+              ${source ? `<a class="source-link" href="${source.url}" target="_blank" rel="noopener">${source.name}</a>` : ""}
               <a class="yt-link" href="${ytUrl}" target="_blank" rel="noopener" aria-label="Buscar ${item.name} en YouTube">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.6 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.2 3.5-6.2 3.5z"/>
@@ -127,39 +136,55 @@ class CarnivalTimeline extends HTMLElement {
             </div>
           </div>
         `;
-      }).join('');
+          })
+          .join("");
 
-      return `
+        return `
         <section class="timeline-group">
           <div class="timeline-badge"></div>
           <div class="timeline-year">${year}</div>
           <div class="cards-wrapper">${cardsHtml}</div>
         </section>
       `;
-    }).join('');
+      })
+      .join("");
 
     this.shadowRoot.innerHTML = `
       <style>${this.#getStyles()}</style>
       <div class="timeline-container">${groupsHtml}</div>
     `;
+    requestAnimationFrame(() => this.#clipLine());
   }
 
   #getFallbackData() {
     return [
       {
-        id: '1985-zombies', year: 1985, name: 'Zombies', type: 'comparsa',
-        director: 'Ángel Subiela', coac: true,
+        id: "1985-zombies",
+        year: 1985,
+        name: "Zombies",
+        type: "comparsa",
+        director: "Ángel Subiela",
+        coac: true,
         awards: { coac_rank: null, other: [] },
-        lyrics: { pasodoble: 'Antonio Martínez Ares' },
-        music:  { pasodoble: 'Antonio Martínez Ares' },
-        sources: [{ name: 'Código Carnaval', url: 'https://www.codigocarnaval.com/autores/martinez-ares/' }],
+        lyrics: { pasodoble: "Antonio Martínez Ares" },
+        music: { pasodoble: "Antonio Martínez Ares" },
+        sources: [
+          {
+            name: "Código Carnaval",
+            url: "https://www.codigocarnaval.com/autores/martinez-ares/",
+          },
+        ],
       },
       {
-        id: '1986-de-locura', year: 1986, name: 'De Locura', type: 'comparsa',
-        director: 'Ángel Subiela', coac: true,
+        id: "1986-de-locura",
+        year: 1986,
+        name: "De Locura",
+        type: "comparsa",
+        director: "Ángel Subiela",
+        coac: true,
         awards: { coac_rank: null, other: [] },
-        lyrics: { pasodoble: 'Antonio Martínez Ares' },
-        music:  { pasodoble: 'Antonio Martínez Ares' },
+        lyrics: { pasodoble: "Antonio Martínez Ares" },
+        music: { pasodoble: "Antonio Martínez Ares" },
         sources: [],
       },
     ];
@@ -179,7 +204,7 @@ class CarnivalTimeline extends HTMLElement {
         --line-color: #1e293b;
         --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         display: block;
-        background-color: var(--bg-color);
+        background-color: transparent;
         color: var(--text-primary);
         font-family: var(--font-stack);
         line-height: 1.5;
@@ -204,7 +229,7 @@ class CarnivalTimeline extends HTMLElement {
       .timeline-container::before {
         content: '';
         position: absolute;
-        top: 0; bottom: 0; left: 50%;
+        top: 20px; bottom: var(--line-bottom, 0); left: 50%;
         width: 4px;
         background-color: var(--line-color);
         transform: translateX(-50%);
@@ -218,6 +243,9 @@ class CarnivalTimeline extends HTMLElement {
         margin-bottom: 4rem;
         position: relative;
         align-items: start;
+      }
+      .timeline-group:last-child {
+        margin-bottom: 0;
       }
       .timeline-badge {
         width: 16px; height: 16px;
@@ -323,12 +351,13 @@ class CarnivalTimeline extends HTMLElement {
       .timeline-group:nth-child(even) .timeline-year { grid-column: 1; grid-row: 1; justify-content: flex-end; padding-right: 2rem; }
 
       @media (max-width: 768px) {
-        .timeline-container::before { left: 20px; }
+        .timeline-container::before { left: 20px; top: 16px; }
         .timeline-group {
           grid-template-columns: 1fr;
           gap: 0.5rem; padding-left: 45px; margin-bottom: 3rem;
         }
         .timeline-badge { left: 20px; top: 8px; }
+
         .timeline-group:nth-child(odd) .cards-wrapper,
         .timeline-group:nth-child(even) .cards-wrapper { grid-column: 1; }
         .timeline-group:nth-child(odd) .timeline-year,
@@ -340,6 +369,17 @@ class CarnivalTimeline extends HTMLElement {
       }
     `;
   }
+
+  #clipLine() {
+    const container = this.shadowRoot.querySelector('.timeline-container');
+    const badges = this.shadowRoot.querySelectorAll('.timeline-badge');
+    if (!container || !badges.length) return;
+    const containerRect = container.getBoundingClientRect();
+    const lastBadge = badges[badges.length - 1];
+    const lastBadgeRect = lastBadge.getBoundingClientRect();
+    const lastBadgeCenterY = lastBadgeRect.top + lastBadgeRect.height / 2 - containerRect.top;
+    container.style.setProperty('--line-bottom', `${containerRect.height - lastBadgeCenterY}px`);
+  }
 }
 
-customElements.define('carnival-timeline', CarnivalTimeline);
+customElements.define("carnival-timeline", CarnivalTimeline);
