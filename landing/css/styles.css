@@ -273,6 +273,24 @@ main {
   color: rgba(255, 255, 255, 0.35);
 }
 
+/* ─── Footer sources ─────────────────────────────────────────────────────── */
+.footer-sources {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-sources-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+}
+
 /* ─── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .nav {
