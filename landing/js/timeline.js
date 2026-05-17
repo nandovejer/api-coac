@@ -66,7 +66,8 @@ class CarnivalTimeline extends HTMLElement {
     const q = encodeURIComponent(`'${type}' ${name}`).replace(/%20/g, "+");
     return `https://www.youtube.com/results?search_query=${q}`;
   }
-
+ 
+  
   #renderLoading() {
     this.shadowRoot.innerHTML = `
       <style>${this.#getStyles()}</style>
@@ -104,6 +105,7 @@ class CarnivalTimeline extends HTMLElement {
             const letra = this.#uniqueAuthors(item.lyrics ?? {});
             const musica = this.#uniqueAuthors(item.music ?? {});
             const ytUrl = this.#youtubeUrl(item.name, item.type);
+            const letrasUrl = item.lyrics_source?.[0]?.url ?? null;
 
             return `
           <div class="timeline-card">
@@ -141,6 +143,15 @@ class CarnivalTimeline extends HTMLElement {
                 : ""
             }
             <div class="card-actions">
+              ${letrasUrl ? `<a class="letras-link" href="${letrasUrl}" target="_blank" rel="noopener" aria-label="Ver letra de ${item.name}" title="${item.lyrics_source[0].name}">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+                Letra
+              </a>` : ""}
               <a class="yt-link" href="${ytUrl}" target="_blank" rel="noopener" aria-label="Buscar ${item.name} en YouTube" title="Buscar en YouTube">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.6 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.2 3.5-6.2 3.5z"/>
@@ -362,6 +373,23 @@ class CarnivalTimeline extends HTMLElement {
         justify-content: flex-end;
         margin-top: 0.85rem;
       }
+      .letras-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.28rem 0.6rem;
+        border-radius: 5px;
+        background-color: #dcfce7;
+        color: #15803d;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        white-space: nowrap;
+        transition: background-color 0.15s, color 0.15s;
+      }
+      .letras-link:hover { background-color: #16a34a; color: #fff; }
+      .letras-link:focus-visible { outline: 2px solid #16a34a; outline-offset: 2px; }
+
       .yt-link {
         display: inline-flex;
         align-items: center;

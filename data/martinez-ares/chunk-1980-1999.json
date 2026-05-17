@@ -24,6 +24,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - Requiebro",
+        "url": "https://letrasdecarnaval.com/agrupacion/requiebro"
+      }
+    ],
     "sources": [
       {
         "name": "Diario de Cádiz",
@@ -64,6 +70,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - Zombies",
+        "url": "https://letrasdecarnaval.com/agrupacion/zombis"
+      }
+    ],
     "sources": [
       {
         "name": "Diario de Cádiz",
@@ -100,7 +112,13 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
-    "sources": []
+    "lyrics_source": [],
+    "sources": [
+      {
+        "name": "Diario de Cádiz",
+        "url": "https://www.diariodecadiz.es/diario_del_carnaval/Carnaval-Cadiz-historias-chirigota-pena_0_1624637724.html"
+      }
+    ]
   },
   {
     "id": "1986-de-locura",
@@ -127,7 +145,22 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
-    "sources": []
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - De Locura",
+        "url": "https://letrasdecarnaval.com/agrupacion/de-locura"
+      }
+    ],
+    "sources": [
+      {
+        "name": "YouTube -  Comparsa DE LOCURA, Año 1986 - Peña La Gaviota",
+        "url": "https://www.youtube.com/watch?v=b2E_oazVciE"
+      },
+      {
+        "name": "Spotify - Comparsa De Locura",
+        "url": "https://open.spotify.com/album/0JUFmSYaKUy3k5nI0dSQYW"
+      }
+    ]
   },
   {
     "id": "1987-esto-es-carnaval",
@@ -154,6 +187,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - ¡Esto es Carnaval!",
+        "url": "https://letrasdecarnaval.com/agrupacion/esto-es-carnaval"
+      }
+    ],
     "sources": [
       {
         "name": "Código Carnaval",
@@ -186,6 +225,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - Entre tus Brazos",
+        "url": "https://letrasdecarnaval.com/agrupacion/con-gancho"
+      }
+    ],
     "sources": []
   },
   {
@@ -213,6 +258,7 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [],
     "sources": [
       {
         "name": "Código Carnaval",
@@ -245,6 +291,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - Con Uñas y Dientes",
+        "url": "https://letrasdecarnaval.com/agrupacion/con-sal-y-pimienta"
+      }
+    ],
     "sources": [
       {
         "name": "Código Carnaval",
@@ -277,6 +329,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - Sonri-sillas",
+        "url": "https://letrasdecarnaval.com/agrupacion/sonrisas"
+      }
+    ],
     "sources": []
   },
   {
@@ -304,6 +362,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - Calabazas",
+        "url": "https://letrasdecarnaval.com/agrupacion/calabazas"
+      }
+    ],
     "sources": [
       {
         "name": "La Voz del Carnaval",
@@ -336,6 +400,7 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [],
     "sources": [
       {
         "name": "Compás Gaditano",
@@ -368,6 +433,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - Do Re Mi Fa Soleando",
+        "url": "https://letrasdecarnaval.com/agrupacion/do-re-mi-fa-so-le-ando"
+      }
+    ],
     "sources": []
   },
   {
@@ -395,6 +466,7 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [],
     "sources": []
   },
   {
@@ -422,6 +494,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - Los Miserables",
+        "url": "https://letrasdecarnaval.com/agrupacion/los-miserables"
+      }
+    ],
     "sources": [
       {
         "name": "Código Carnaval",
@@ -454,6 +532,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - La Ventolera",
+        "url": "https://letrasdecarnaval.com/agrupacion/la-ventolera"
+      }
+    ],
     "sources": []
   },
   {
@@ -481,6 +565,7 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [],
     "sources": [
       {
         "name": "Código Carnaval",
@@ -513,6 +598,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - El Brujo",
+        "url": "https://letrasdecarnaval.com/agrupacion/el-brujo"
+      }
+    ],
     "sources": []
   },
   {
@@ -540,6 +631,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - La Trinchera",
+        "url": "https://letrasdecarnaval.com/agrupacion/la-trinchera"
+      }
+    ],
     "sources": [
       {
         "name": "Código Carnaval",
@@ -572,6 +669,7 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [],
     "sources": []
   },
   {
@@ -599,6 +697,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - El Vapor",
+        "url": "https://letrasdecarnaval.com/agrupacion/el-vapor"
+      }
+    ],
     "sources": []
   },
   {
@@ -626,6 +730,7 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [],
     "sources": [
       {
         "name": "Código Carnaval",
@@ -660,6 +765,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - Los Piratas",
+        "url": "https://letrasdecarnaval.com/agrupacion/los-piratas"
+      }
+    ],
     "sources": [
       {
         "name": "Diario de Cádiz",
@@ -692,6 +803,7 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [],
     "sources": [
       {
         "name": "Código Carnaval",
@@ -724,6 +836,7 @@
       "estribillo": "Francisco J. Álvarez / José A. Flores",
       "popurri": "Francisco J. Álvarez / José A. Flores"
     },
+    "lyrics_source": [],
     "sources": [
       {
         "name": "Código Carnaval",
@@ -756,6 +869,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - Los Templarios",
+        "url": "https://letrasdecarnaval.com/agrupacion/los-templarios"
+      }
+    ],
     "sources": []
   },
   {
@@ -783,6 +902,7 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [],
     "sources": [
       {
         "name": "Código Carnaval",

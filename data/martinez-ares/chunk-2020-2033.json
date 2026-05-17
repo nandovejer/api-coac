@@ -27,6 +27,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - La Chusma Selecta",
+        "url": "https://letrasdecarnaval.com/agrupacion/la-chusma-selecta"
+      }
+    ],
     "sources": []
   },
   {
@@ -56,6 +62,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - Los Sumisos",
+        "url": "https://letrasdecarnaval.com/agrupacion/los-sumisos"
+      }
+    ],
     "sources": [
       {
         "name": "Código Carnaval",
@@ -90,6 +102,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - La Ciudad Invisible",
+        "url": "https://letrasdecarnaval.com/agrupacion/la-ciudad-invisible"
+      }
+    ],
     "sources": [
       {
         "name": "Código Carnaval",
@@ -124,6 +142,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - La Oveja Negra",
+        "url": "https://letrasdecarnaval.com/agrupacion/la-oveja-negra"
+      }
+    ],
     "sources": [
       {
         "name": "Código Carnaval",
@@ -156,6 +180,7 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [],
     "sources": []
   },
   {
@@ -183,6 +208,12 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [
+      {
+        "name": "letras - comparsa - Los Humanos",
+        "url": "https://letrasdecarnaval.com/agrupacion/los-humanos"
+      }
+    ],
     "sources": [
       {
         "name": "Código Carnaval",
@@ -215,6 +246,7 @@
       "estribillo": "Antonio Martínez Ares",
       "popurri": "Antonio Martínez Ares"
     },
+    "lyrics_source": [],
     "sources": []
   }
 ]
