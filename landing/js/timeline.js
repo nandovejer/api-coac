@@ -242,16 +242,16 @@ class CarnivalTimeline extends HTMLElement {
   #getStyles() {
     return `
       :host {
-        --bg-color: #f8fafc;
-        --card-bg: #ffffff;
-        --text-primary: #0f172a;
-        --text-secondary: #475569;
-        --text-muted: #64748b;
-        --accent-color: #2563eb;
-        --award-color: #d97706;
-        --border-color: #e2e8f0;
-        --line-color: #1e293b;
-        --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        --bg-color: var(--cai-bg-primary, #f8fafc);
+        --card-bg: var(--cai-bg-secondary, #ffffff);
+        --text-primary: var(--cai-text-primary, #0f172a);
+        --text-secondary: var(--cai-text-secondary, #475569);
+        --text-muted: var(--cai-text-placeholder, #64748b);
+        --accent-color: var(--cai-blue-60, #0f62fe);
+        --award-color: var(--gold, #d97706);
+        --border-color: var(--cai-gray-20, #e2e8f0);
+        --line-color: var(--cai-gray-90, #1e293b);
+        --font-stack: var(--cai-font-sans, system-ui, sans-serif);
         display: block;
         background-color: transparent;
         color: var(--text-primary);

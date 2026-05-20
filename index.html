@@ -1,128 +1,16 @@
-<!DOCTYPE html>
-<html lang="es">
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="minimalist" data-mode="light">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COAC Archivo — API de datos del Carnaval de Cádiz</title>
   <meta name="description" content="Archivo digital estructurado del COAC. Datos abiertos sobre agrupaciones, autores, letras, música y premios del Carnaval de Cádiz.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@cai-ds/tokens@2.0.0-beta.2/dist/cai-tokens.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@cai-ds/core@2.0.0/dist/cai.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@cai-ds/core@2.0.0/dist/themes/cai-theme-minimalist.css">
   <link rel="stylesheet" href="landing/css/styles.css">
-  <style>
-    .authors-section {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-    }
-    .authors-section-title {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 1.75rem;
-    }
-    .authors-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.25rem;
-    }
-    .author-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.75rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-      transition: box-shadow 0.2s, border-color 0.2s;
-      text-decoration: none;
-      color: inherit;
-    }
-    .author-card:hover {
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      border-color: var(--accent);
-    }
-    .author-avatar {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: var(--dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-    }
-    .author-name {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text);
-      line-height: 1.25;
-    }
-    .author-role {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      margin-top: -0.4rem;
-    }
-    .author-bio {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.55;
-      flex: 1;
-    }
-    .author-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--accent);
-      margin-top: 0.25rem;
-    }
-    .author-cta::after { content: "→"; }
-
-    /* Card placeholder para futuros autores */
-    .author-card.coming-soon {
-      border-style: dashed;
-      background: transparent;
-      pointer-events: none;
-      opacity: 0.5;
-    }
-    .author-card.coming-soon .author-name { color: var(--text-muted); }
-
-    /* API section */
-    .api-section {
-      background: var(--dark);
-      color: rgba(255,255,255,0.8);
-      padding: 4rem 2rem;
-    }
-    .api-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .api-inner h2 {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 1rem;
-    }
-    .api-inner p { font-size: 0.95rem; line-height: 1.65; margin-bottom: 0.75rem; }
-    pre {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 8px;
-      padding: 1.25rem 1.5rem;
-      font-size: 0.82rem;
-      overflow-x: auto;
-      margin-top: 1.25rem;
-      color: #e2e8f0;
-      line-height: 1.7;
-    }
-
-    @media (max-width: 768px) {
-      .authors-section { padding: 2.5rem 1.25rem; }
-      .api-section { padding: 2.5rem 1.25rem; }
-    }
-  </style>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@cai-ds/core@2.0.0/dist/cai.js"></script>
 </head>
 
 <body>
@@ -174,7 +62,7 @@
     <p class="authors-section-title" id="autores-title">Autores disponibles</p>
     <div class="authors-grid">
 
-      <a class="author-card" href="authors/martinez-ares/" title="Ver discografía de Antonio Martínez Ares">
+      <a class="cai-card author-card" href="authors/martinez-ares/" title="Ver discografía de Antonio Martínez Ares">
         <div class="author-avatar" aria-hidden="true">🎶</div>
         <div>
           <p class="author-name">Antonio Martínez Ares</p>
@@ -187,7 +75,7 @@
         <span class="author-cta">Ver discografía</span>
       </a>
 
-      <div class="author-card coming-soon" aria-hidden="true">
+      <div class="cai-card author-card coming-soon" aria-hidden="true">
         <div class="author-avatar">🥁</div>
         <div>
           <p class="author-name">Próximo autor</p>
@@ -204,7 +92,7 @@
     <div class="api-inner">
       <h2>Uso de la API</h2>
       <p>Todos los datos son ficheros JSON estáticos servidos desde GitHub Pages. Sin autenticación, sin rate limiting, con CORS habilitado.</p>
-      <pre><code>// Registro de autores
+      <pre class="cai-code"><code>// Registro de autores
 GET /data/authors.json
 
 // Datos de un autor por era
@@ -213,7 +101,7 @@ GET /data/martinez-ares/chunk-2000-2019.json
 
 // Índice de búsqueda global
 GET /data/search-index.json</code></pre>
-      <pre><code>// Ejemplo en JavaScript
+      <pre class="cai-code"><code>// Ejemplo en JavaScript
 const BASE = 'https://nandovejer.github.io/ares-api/data/';
 
 const authors = await fetch(BASE + 'authors.json').then(r => r.json());

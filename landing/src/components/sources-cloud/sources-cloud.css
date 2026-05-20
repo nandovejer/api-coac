@@ -1,6 +1,6 @@
 :host {
   display: block;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--cai-font-sans, system-ui, sans-serif);
 }
 
 *,
@@ -12,13 +12,13 @@
 }
 
 .status {
-  font-size: 0.85rem;
+  font-size: var(--cai-text-sm, 12px);
   color: rgba(255, 255, 255, 0.4);
   padding: 0.25rem 0;
 }
 
 .status--error {
-  color: #f87171;
+  color: var(--cai-red-40, #f87171);
 }
 
 .cloud-list {
@@ -33,10 +33,10 @@
   align-items: center;
   gap: 0.3rem;
   padding: 0.28rem 0.65rem;
-  border-radius: 20px;
+  border-radius: var(--cai-radius-full, 9999px);
   background-color: rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.65);
-  font-size: 0.78rem;
+  font-size: var(--cai-text-xs, 11px);
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
@@ -49,7 +49,7 @@
 }
 
 .cloud-tag:focus-visible {
-  outline: 2px solid #60a5fa;
+  outline: 2px solid var(--cai-blue-40, #60a5fa);
   outline-offset: 2px;
 }
 
