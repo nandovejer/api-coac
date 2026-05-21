@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import { cpSync } from 'fs';
 
 export default defineConfig({
   base: '/api-coac/',
@@ -12,4 +13,13 @@ export default defineConfig({
       },
     },
   },
+  plugins: [
+    {
+      name: 'copy-static-data',
+      closeBundle() {
+        // Copy JSON data files so the API endpoints work in production
+        cpSync(resolve(__dirname, 'data'), resolve(__dirname, 'dist/data'), { recursive: true });
+      },
+    },
+  ],
 });

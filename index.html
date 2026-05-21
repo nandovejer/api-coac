@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; style-src 'self' cdn.jsdelivr.net; script-src 'self' cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self'; font-src 'self' cdn.jsdelivr.net;">
+        content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self';">
   <title>COAC Archivo — API de datos del Carnaval de Cádiz</title>
   <meta name="description" content="Archivo digital estructurado del COAC. Datos abiertos sobre agrupaciones, autores, letras, música y premios del Carnaval de Cádiz.">
   <link rel="stylesheet" href="landing/css/styles.css">
@@ -150,15 +150,6 @@ const works = await fetch(BASE + 'martinez-ares/chunk-1980-1999.json')
     </div>
   </footer>
 
-  <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const menu   = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => {
-      const open = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!open));
-      menu.classList.toggle('is-open');
-    });
-  </script>
 
 </body>
 </html>

@@ -21,7 +21,7 @@ class CarnivalTimeline extends HTMLElement {
   connectedCallback() {
     const api = this.getAttribute("data-api");
     if (api) {
-      this.#fetchAndRender(api);
+      this.#fetchAndRender(new URL(api, document.baseURI).href);
     } else {
       this.#render(this.#getFallbackData());
     }
@@ -30,7 +30,7 @@ class CarnivalTimeline extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     if (oldValue === newValue) return;
     if (name === "data-api" && newValue) {
-      this.#fetchAndRender(newValue);
+      this.#fetchAndRender(new URL(newValue, document.baseURI).href);
     }
   }
 

@@ -5,15 +5,15 @@ const CHUNKS = [
   "chunk-2020-2033.json",
 ];
 
-const _dir = new URL(".", import.meta.url).href;
+const _base = import.meta.env?.BASE_URL ?? '/';
 let _tplContent = null;
 let _cssText = null;
 
 async function _loadAssets() {
   if (_tplContent !== null) return;
   const [html, css] = await Promise.all([
-    fetch(`${_dir}sources-cloud.html`).then((r) => r.text()),
-    fetch(`${_dir}sources-cloud.css`).then((r) => r.text()),
+    fetch(`${_base}sources-cloud.html`).then((r) => r.text()),
+    fetch(`${_base}sources-cloud.css`).then((r) => r.text()),
   ]);
   const doc = new DOMParser().parseFromString(html, "text/html");
   _tplContent = doc.getElementById("sources-cloud-tpl").content;
@@ -45,12 +45,12 @@ class SourcesCloud extends HTMLElement {
     this.shadowRoot.appendChild(_tplContent.cloneNode(true));
 
     const api = this.getAttribute("data-api");
-    if (api) this.#fetchAndRender(api);
+    if (api) this.#fetchAndRender(new URL(api, document.baseURI).href);
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
     if (oldValue === newValue || !this.#initialized) return;
-    if (name === "data-api" && newValue) this.#fetchAndRender(newValue);
+    if (name === "data-api" && newValue) this.#fetchAndRender(new URL(newValue, document.baseURI).href);
   }
 
   async #fetchAndRender(baseUrl) {

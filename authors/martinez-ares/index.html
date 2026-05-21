@@ -5,11 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; style-src 'self' cdn.jsdelivr.net; script-src 'self' cdn.jsdelivr.net; img-src 'self' data: www.youtube.com; connect-src 'self'; font-src 'self' cdn.jsdelivr.net; frame-src www.youtube.com;">
+        content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data: www.youtube.com; connect-src 'self'; font-src 'self'; frame-src www.youtube.com;">
   <title>Antonio Martínez Ares — Trayectoria Carnavalesca · COAC Archivo</title>
   <meta name="description"
     content="Archivo completo de obras carnavalescas de Antonio Martínez Ares: letras, música, directores y premios COAC desde 1965.">
-  <link rel="stylesheet" href="../../landing/css/styles.css">
   <script type="module" src="../../landing/js/main-author.js"></script>
 </head>
 
@@ -125,17 +124,6 @@
     </div>
   </footer>
 
-  <script type="module" src="../../landing/js/timeline.js"></script>
-  <script type="module" src="../../landing/src/components/sources-cloud/sources-cloud.js"></script>
-  <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const menu = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => {
-      const open = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!open));
-      menu.classList.toggle('is-open');
-    });
-  </script>
 
 </body>
 
