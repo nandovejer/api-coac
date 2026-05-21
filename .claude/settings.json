@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell([System.IO.Directory]::GetFiles\\(\"C:\\\\Users\\\\mago\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\pnpm\\\\dist\"\\) | Select-Object -First 5)",
+      "PowerShell(node \"C:\\\\Users\\\\mago\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\pnpm\\\\dist\\\\pnpm.mjs\" --version)",
+      "Bash(corepack --version)",
+      "Bash(corepack prepare *)"
+    ]
+  }
+}
